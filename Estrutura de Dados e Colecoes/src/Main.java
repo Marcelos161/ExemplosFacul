@@ -53,6 +53,15 @@ public class Main {
         //Acessar o elemento no topo da pilha
         char elementoDoTopo = pilha.peek();
 
+        //
+        boolean contemA = pilha.contains('A');
+
+        //Iterar na pilha
+        while (!pilha.isEmpty()) {
+            char livro = pilha.remove();
+            System.out.println();
+        }
+
     }
 
     static void exemploListas() {
