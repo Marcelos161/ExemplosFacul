@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class Main {
 
@@ -58,8 +55,8 @@ public class Main {
 
         //Iterar na pilha
         while (!pilha.isEmpty()) {
-            char livro = pilha.remove();
-            System.out.println();
+            char livro = pilha.pop();
+            System.out.println(livro);
         }
 
     }
@@ -99,8 +96,37 @@ public class Main {
         System.out.println("Tem \uD83E\uDD21: " + lista.contains("\uD83E\uDD21" ));
         System.out.println("Indice \uD83E\uDD21: " + lista.indexOf("\uD83E\uDD21"));
     }
+
+    static void exemploHash() {
+        Map<String, Integer> tabela = new HashMap<>();
+
+        tabela.put("Maça", 190);
+        tabela.put("Laranja", 200);
+        tabela.put("Banana", 90);
+
+        // verificar o tamanho
+        System.out.println(tabela.size());
+
+        //Acessar valor
+        int qtDeMaca = tabela.get("Maça");
+
+        // Verificar se contem chave
+        boolean contemBanana = tabela.containsKey("Banana");
+
+        //Remover
+        tabela.remove("Laranja");
+
+        //Iterar
+        for (Map.Entry<String, Integer> registro: tabela.entrySet()) {
+            String chave = registro.getKey();
+            int valor = registro.getValue();
+        }
+
+    }
     public static void main(String[] args) {
         exemploListas();
         exemploFila();
+        exemploHash();
+        exemploPilha();
     }
 }
